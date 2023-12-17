@@ -1,0 +1,21 @@
+/*rgb(222, 241, 222)*/
+
+#temp{
+	border: 2px;
+	border-style: solid;
+	border-color: #d1011b;
+}
+
+#centered{
+  /*margin-top: 90px;*/
+  /*text-align: center;*/
+  border: 2px;
+  border-style: solid;
+  border-color: #dadada;
+}
+
+#border{
+	border: 2px;
+	border-style: solid;
+	border-color: #b6b6b6;
+}

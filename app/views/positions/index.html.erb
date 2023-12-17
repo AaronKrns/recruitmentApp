@@ -1,0 +1,51 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4 text-center">
+    <h2>Positions</h2>
+  </div>
+  <div class="col-sm-4">
+  </div>
+</div>
+</div>  
+</br>
+</br>
+
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4 text-center" id="border">
+    <div id="positions">
+    <% @positions.each do |position| %>
+      <%= render position %>
+      <%= link_to "Show this position", position %>
+    <% end %>
+    </div>
+  </div>
+  <div class="col-sm-4">
+  </div>
+</div>
+</div>  
+</br>
+</br>
+
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4 text-center">
+    <%= link_to "New position", new_position_path %>
+  </div>
+  <div class="col-sm-4">
+  </div>
+</div>
+</div>
+
+

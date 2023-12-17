@@ -1,0 +1,75 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4 text-center">
+  <%= form_for([@position, @candidate]) do |f| %>
+    <% if @candidate.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@candidate.errors.count, "error")%>
+            prohibited this candidate from being saved:</h2>
+            <ul>
+                <% @candidate.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+
+    <div class="name_field">
+        <p>
+            <%= f.label :Name %><br />
+            <%= f.text_field :name %>            
+        </p>
+    </div>
+
+    <div class="cv_rating_field">
+        <p>
+            <%= f.label :CV_rating %><br />
+            <%= f.text_field :cv_rating %>           
+        </p>
+    </div>
+
+    <div class="availability_field">
+        <p>
+            <%= f.label :Availability %><br />
+            <%= f.text_field :availability %>              
+        </p>
+    </div>
+
+    <div class="interview_stage_field">
+        <p>
+            <%= f.label :Interview_stage %><br />
+            <%= f.text_field :interview_stage %>            
+        </p>
+    </div>
+
+    <div class="phone_number_field">
+        <p>
+            <%= f.label :Phone_number %><br />
+            <%= f.text_field :phone_number %>             
+        </p>
+    </div>
+
+    <div class="email_field">
+        <p>
+            <%= f.label :Email %><br />
+            <%= f.text_field :email %>             
+        </p>
+    </div>
+
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>
+  </div>
+  <div class="col-sm-4">
+  </div>
+</div>
+</div>  
+</br>
+</br>
+
+
+    

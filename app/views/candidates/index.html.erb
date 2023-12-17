@@ -1,0 +1,56 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4 text-center">
+    <h2>Candidates in <%= @position.title %></h2>
+  </div>
+  <div class="col-sm-4">
+  </div>
+</div>
+</div>  
+</br>
+</br>
+
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-8 text-center" id="border">
+  <p><b>Candidate details</b></p>
+  <% for candidate in @candidates %>
+    <p>
+    <p>Name: <%= candidate.name %></p>
+    <p>CV Rating (1 - high, 2 - average, 3 - low): <%= candidate.cv_rating %></p>
+    <p>Availability: <%= candidate.availability %></p>
+    <p>Interview stage (1 or 2): <%= candidate.interview_stage %></p>
+    <p>Phone number: <%= candidate.phone_number %></p>
+    <p>Email: <%= candidate.email %></p>
+    </p>
+  <% end %>
+  <%= link_to 'Show', position_candidate_path(@position, candidate) %> | 
+  <%= link_to 'Edit', edit_position_candidate_path(@position, candidate) %>
+  <%= button_to "Delete candidate", position_candidate_path(@position, candidate), method: :delete %>
+</br>
+  </div>
+  <div class="col-sm-2">
+  </div>
+</div>
+</div>  
+</br>
+</br>
+
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4 text-center">
+  <%= link_to 'New candidate', new_position_candidate_path(@position) %> | 
+  <%= link_to 'Back to position', @position %>
+  </div>
+  <div class="col-sm-4">
+  </div>
+</div>
+</div>

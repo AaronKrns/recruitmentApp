@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+candidateOne:
+  name: MyString
+  cv_rating: MyString
+  availability: MyString
+  interview_stage: MyString
+  phone_number: MyString
+  email: MyString
+  position_id: one
+
+candidateTwo:
+  name: MyString
+  cv_rating: MyString
+  availability: MyString
+  interview_stage: MyString
+  phone_number: MyString
+  email: MyString
+  position_id: two
